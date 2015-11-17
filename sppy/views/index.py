@@ -8,12 +8,12 @@ request.values : If you want both
 """
 
 
-@app.route('/ping')
+@app.route('/ping/')
 def ping():
-    return 'pong'
+    return json.dumps('pong')
 
 
-@app.route('/send')
+@app.route('/send/')
 def send():
     return render_template('send.html')
 
